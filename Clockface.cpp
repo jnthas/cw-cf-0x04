@@ -1,7 +1,5 @@
 #include "Clockface.h"
 
-const char* FORMAT_TWO_DIGITS = "%02d";
-
 const byte CLOCK_POINTER_SIZE = 10;
 const byte CLOCK_POINTER_POSX = 32;
 const byte CLOCK_POINTER_POSY = 28;
@@ -21,7 +19,6 @@ Clockface::Clockface(Adafruit_GFX* display) {
 
 void Clockface::setup(CWDateTime *dateTime) {
   this->_dateTime = dateTime;
-  Locator::getDisplay()->setTextWrap(true);
   Locator::getDisplay()->fillRect(0, 0, 64, 64, 0x0000);  
   updateClock();
 }
