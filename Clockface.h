@@ -20,6 +20,7 @@ class Clockface: public IClockface {
   private:
     void updateClock();
     void drawClockPointer(float angle, byte pointerSize, uint16_t color);
+    float degreesToRadians(float degrees);
 
     
   public:
