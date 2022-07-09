@@ -4,7 +4,6 @@ const byte CLOCK_POINTER_SIZE = 10;
 const byte CLOCK_POINTER_POSX = 32;
 const byte CLOCK_POINTER_POSY = 28;
 
-
 const uint16_t BG_COLOR = 0x00E1;
 const uint16_t POINTER_COLOR = 0xB58C;
 
@@ -39,10 +38,10 @@ void Clockface::update()
     float minAngle = degreesToRadians((_dateTime->getMinute()*MIN_OFFSET)+180);
 
     drawClockPointer(lastMinAngle, CLOCK_POINTER_SIZE, BG_COLOR);
-    drawClockPointer(lastHourAngle, CLOCK_POINTER_SIZE-4, BG_COLOR);
+    drawClockPointer(lastHourAngle, CLOCK_POINTER_SIZE-3, BG_COLOR);
     
     drawClockPointer(minAngle, CLOCK_POINTER_SIZE, POINTER_COLOR);
-    drawClockPointer(hourAngle, CLOCK_POINTER_SIZE-4, POINTER_COLOR);
+    drawClockPointer(hourAngle, CLOCK_POINTER_SIZE-3, POINTER_COLOR);
 
     lastHourAngle = hourAngle;
     lastMinAngle = minAngle;
